@@ -49,11 +49,11 @@
             </div>
             <div class="right-part">
               <h1>Дизайн и верстка</h1>
-              <p class="description">
+              <div class="description">
                 Lorem Ipsum - это текст-"рыба", часто используемый в печати и
                 вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для
                 текстов на латинице с начала XVI века.
-              </p>
+              </div>
               <button class="main-section__button">Написать мне</button>
             </div>
           </div>
@@ -64,14 +64,15 @@
         <div class="fixed-container">
           <div class="section-content__about-me" id="about-me">
             <h2>Обо мне</h2>
-            <p class="section-content__text">
+            <div class="section-content__text">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
               на латинице с начала XVI века.
-            </p>
+            </div>
           </div>
         </div>
       </section>
+      <!-- *при желании переписать на дивах без списка -->
       <section class="my-projects">
         <div class="fixed-container">
           <div class="projects" id="portfolio">
@@ -158,12 +159,80 @@
           </div>
         </div>
       </section>
+      <!-- для простоты верстки объединили изображения из проекта -->
+      <section class="img-background">
+        <div>
+          <img src="img/section_img.png" alt="" />
+        </div>
+      </section>
+      <!-- !здесь дописать секцию Microsoft можно по аналогии с my-project или на дивах без списка-->
+      <section class="microsoft">
+        <div class="microsoft__block">
+          <div class="microsoft__img">
+            <img src="img/microsoft.png" alt="" />
+          </div>
+          <div class="microsoft__img">
+            <img src="img/microsoft.png" alt="" />
+          </div>
+          <div class="microsoft__img">
+            <img src="img/microsoft.png" alt="" />
+          </div>
+          <div class="microsoft__img">
+            <img src="img/microsoft.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="feedback">
+        <div class="feedback__contaner">
+          <h2>Хотите веб-сайт?</h2>
+          <div class="feedback__text">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+            вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на
+            латинице с начала XVI века.
+          </div>
+          <div>
+            <form action="#" method="POST" class="feedback__form">
+              <div class="form__item form__item_1">
+                <input placeholder="Ваше имя" name="username" type="text" />
+              </div>
+              <div class="form__item form__item_2">
+                <input placeholder="Ваш e-mail" name="e-mail" type="email" />
+              </div>
+              <div class="form__item form__item_3">
+                <textarea
+                  placeholder="Сообщение"
+                  name="text"
+                  type="text"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <button type="submit" class="feedback__button">отправить</button>
+        </div>
+      </section>
     </main>
     <footer>
-      <div class="fixed-container">
-        <div class="section-contant" id="contacts"></div>
+      <div class="footer">
+        <div class="footer__contaner">
+          <div class="footer__left">
+            <div class="footer__name" id="contacts">Иванов Иван</div>
+            <div class="footer__copyright">(с) 2018. Все права защищены.</div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__vk">
+              <img src="img/vk-logo.png" alt="" />
+            </div>
+            <div class="footer__vk">
+              <img src="img/vk-logo.png" alt="" />
+            </div>
+            <div class="footer__vk">
+              <img src="img/vk-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+    <!-- бургер меню -->
     <div class="mobile-container" id="popup">
       <a href="#header" class="popup__area"></a>
 

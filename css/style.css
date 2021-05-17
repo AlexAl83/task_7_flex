@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   font-family: 'Roboto';
   box-sizing: border-box;
   font-size: 16px;
@@ -8,10 +9,12 @@
 }
 /* body {
   width: 1920px;
+	font-family: 'Roboto';
 } */
 .header,
 .main-section,
-.process {
+.process,
+.feedback {
   padding-top: 0;
   background-color: #eeeff1;
 }
@@ -94,7 +97,8 @@ h1 {
   margin: 45px 0 0 0;
   white-space: normal;
 }
-.main-section__button {
+.main-section__button,
+.feedback__button {
   width: 225px;
   height: 65px;
   background: #34547a;
@@ -110,7 +114,7 @@ h1 {
   background-color: #15273e;
 }
 .section-content__about-me {
-  width: 555px;
+  max-width: 555px;
   margin: 90px auto;
   text-align: center;
   padding: 21px 0 0 15px;
@@ -133,6 +137,7 @@ h2 {
 }
 .projects__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 100px 10px;
 }
@@ -168,32 +173,133 @@ h3 {
   padding: 16px 0;
 }
 .skills__avatar {
-  flex: 0 1 555px;
+  flex: 1 1 555px;
   margin: 2px -10px;
+  max-width: 555px;
 }
 .skills__avatar img {
   max-width: 100%;
   /* object-fit: ; */
 }
-.process__container {
-  /* display: flex;
+.process__container,
+.microsoft__block {
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; */
-  /* align-items: center; */
-  margin: 100px auto;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px auto 20px;
   padding: 55px 0 95px;
   max-width: 1100px;
 }
 .process__contant {
-  width: 555px;
+  max-width: 555px;
   margin: 40px auto;
   text-align: center;
   padding: 0px 0 10px 15px;
 }
 .process__img {
-  padding: 0 5px 0 0px;
+  max-width: 1100px;
+}
+.process__img img {
+  max-width: 100%;
+}
+
+/* !Не смог сделать заполнение на 100% при выставлении жесткого параметра widht перестает сжиматься, из- за этого плывет остальная часть */
+.img-background {
+  display: flex;
+  width: 100%;
+}
+/* .img-background img {
+ 
+} */
+.microsoft__block {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 25px auto 0px;
+}
+.feedback {
+  height: 762px;
+}
+.feedback__contaner {
+  max-width: 540px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.feedback__text {
+  line-height: 26px;
+  color: #727272;
+  padding: 40px 0;
+}
+.feedback__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.form__item {
+  margin: 15px 0;
+  width: 48%;
+}
+.form__item:last-child {
+  flex-grow: 1;
+}
+.feedback__form input {
+  line-height: 50px;
+  padding: 0 10px;
+  width: 260px;
+}
+.form__item textarea {
+  width: 100%;
+  height: 175px;
+  padding: 0 20px;
+  line-height: 50px;
+}
+.feedback__button {
+  margin: 25px;
+  width: 190px;
+  height: 55px;
+  font-size: 14px;
+}
+.footer {
+  background-color: #34547a;
+}
+.footer__contaner {
+  margin: 0 auto;
+  max-width: 1150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__left {
+  color: #ffffff;
+}
+.footer__name {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+}
+.footer__copyright {
+  font-size: 13px;
+  line-height: 21px;
+}
+.footer__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer__vk {
+  margin: 55px 21px;
 }
 /* стили для мобильной версии */
+/* 
+
+
+
+
+ */
+
 .mobile-container {
   opacity: 0;
   visibility: hidden;
@@ -275,7 +381,7 @@ h3 {
 .mobile-list a:hover {
   color: #e8eb33;
 }
-
+/* ?для адаптива доделать перенос изображение попарно или по 3 */
 @media (max-width: 1240px) {
   .description,
   .section-content__text {
@@ -330,9 +436,26 @@ h3 {
   .logo {
     font-size: 48px;
   }
+  .skills__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills__avatar {
+    max-width: 555px;
+    padding: 20px;
+  }
 }
 @media (max-width: 400px) {
   .laptop img {
     width: 250px;
+  }
+  .description,
+  .section-content__text {
+    /* margin-bottom: 70px; */
+    width: 100%;
+  }
+  .skills__content {
+    /* margin-bottom: 70px; */
+    width: 100%;
   }
 }
