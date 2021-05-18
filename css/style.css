@@ -75,7 +75,8 @@ h6 {
   font-weight: inherit;
 }
 /*--------------------*/
-/* фикс ширина только для perfect pixel */
+/* !фикс ширина только для perfect pixel */
+
 /* body {
   width: 1920px;
 } */
