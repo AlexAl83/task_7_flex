@@ -1,45 +1,112 @@
+/*Обнуление*/
 * {
+  padding: 0;
   margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  font-family: 'Roboto';
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
   padding: 0;
   border: 0;
-  font-family: 'Roboto';
-  box-sizing: border-box;
-  font-size: 16px;
-  list-style-type: none;
 }
-/* body {
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*--------------------*/
+body {
   width: 1920px;
-	font-family: 'Roboto';
-} */
+}
 .header,
-.main-section,
+.main,
 .process,
 .feedback {
   padding-top: 0;
   background-color: #eeeff1;
 }
 
-.fixed-container {
+.container {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 12px;
   max-width: 1150px;
 }
-.menu-container {
+.menu__container {
   padding-top: 50px;
   display: flex;
   justify-content: space-between;
 }
-.logo {
+.menu__logo {
   font-family: 'Revalia';
   font-size: 57.6px;
-  line-height: 71px;
+  line-height: 70px;
   text-align: center;
   color: #34547a;
 }
-.header-menu {
-  padding: 19px 0 0 0;
+.menu__nav {
+  padding: 19px 17px 0 0;
 }
-.menu {
+.menu__list {
   display: flex;
   justify-content: space-between;
 }
@@ -71,17 +138,17 @@ nav ul li a:hover {
 .burger-icon span:nth-child(2) {
   margin: 6px 0;
 }
-.section-container {
+.main__section {
   display: flex;
   justify-content: space-between;
-  padding: 128px 0 154px;
+  padding: 129px 0 156px;
 }
-.laptop {
+.main__laptop {
   padding: 22px 0 0 90px;
 }
-.right-part {
+.main__right-part {
   /* padding-left: 80px; */
-  margin: 0 2px 0 0;
+  margin: 5px 19px 0 0;
 }
 /* в оригинале класс caption */
 h1 {
@@ -90,14 +157,14 @@ h1 {
   /* line-height: 79px; */
   color: #000000;
 }
-.description {
+.right-part__description {
   width: 530px;
   line-height: 26px;
   color: #727272;
-  margin: 45px 0 0 0;
+  margin: 50px 0 0 0;
   white-space: normal;
 }
-.main-section__button,
+.right-part__button,
 .feedback__button {
   width: 225px;
   height: 65px;
@@ -106,40 +173,41 @@ h1 {
   text-transform: uppercase;
   padding-top: 4px;
   color: #ffffff;
+  font-size: 16px;
   cursor: pointer;
   margin-top: 52px;
   border: none;
 }
-.main-section__button:hover {
+.right-part__button:hover {
   background-color: #15273e;
 }
-.section-content__about-me {
-  max-width: 555px;
+.about__content {
+  max-width: 540px;
   margin: 90px auto;
   text-align: center;
-  padding: 21px 0 0 15px;
+  padding: 21px 0 0 0;
 }
 h2 {
   font-weight: 500;
   font-size: 32px;
   color: #000000;
 }
-.section-content__text,
+.about__text,
 .process__text {
   line-height: 26px;
   text-align: center;
   color: #727272;
-  margin: 40px 0 0;
+  margin: 44px 0 0;
   white-space: normal;
 }
-.my-projects {
+.projects {
   background: #34547a;
 }
 .projects__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 100px 10px;
+  padding: 100px 30px 100px 10px;
 }
 .projects__item {
   display: flex;
@@ -147,6 +215,7 @@ h2 {
 }
 .projects__text {
   padding: 3px 0 0 20px;
+  line-height: 20px;
   color: #ffffff;
 }
 h3 {
@@ -158,23 +227,22 @@ h3 {
 .skills__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 100px auto;
-  padding: 0 20px;
+  margin: 102px auto 95px;
+  padding: 0 20px 0 10px;
   max-width: 1190px;
 }
 .skills__content {
-  padding: 105px 20px 50px 10px;
+  max-width: 445px;
+  padding: 107px 20px 40px 12px;
 }
 .skills__item {
-  padding: 30px 10px 25px 0px;
+  padding: 45px 10px 25px 0px;
 }
 .item__class {
-  padding: 16px 0;
+  padding: 18px 0;
 }
 .skills__avatar {
   flex: 1 1 555px;
-  margin: 2px -10px;
   max-width: 555px;
 }
 .skills__avatar img {
@@ -187,50 +255,41 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 100px auto 20px;
-  padding: 55px 0 95px;
-  max-width: 1100px;
+  margin: 100px auto 30px;
+  padding: 55px 0 100px;
+  max-width: 1110px;
 }
 .process__contant {
-  max-width: 555px;
-  margin: 40px auto;
+  max-width: 540px;
+  margin: 46px auto;
   text-align: center;
-  padding: 0px 0 10px 15px;
-}
-.process__img {
-  max-width: 1100px;
 }
 .process__img img {
   max-width: 100%;
 }
 
-/* !Не смог сделать заполнение на 100% при выставлении жесткого параметра widht перестает сжиматься, из- за этого плывет остальная часть */
-.img-background {
-  display: flex;
+.img-background img {
   width: 100%;
 }
-/* .img-background img {
- 
-} */
 .microsoft__block {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 25px auto 0px;
+  margin: 17px auto 0px;
 }
 .feedback {
-  height: 762px;
+  max-height: 762px;
 }
 .feedback__contaner {
   max-width: 540px;
   text-align: center;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 103px 0;
 }
 .feedback__text {
   line-height: 26px;
   color: #727272;
-  padding: 40px 0;
+  padding: 42px 0;
 }
 .feedback__form {
   display: flex;
@@ -238,7 +297,7 @@ h3 {
   justify-content: space-between;
 }
 .form__item {
-  margin: 15px 0;
+  margin: 14px 0px 5px 0px;
   width: 48%;
 }
 .form__item:last-child {
@@ -246,7 +305,7 @@ h3 {
 }
 .feedback__form input {
   line-height: 50px;
-  padding: 0 10px;
+  padding: 0 22px;
   width: 260px;
 }
 .form__item textarea {
@@ -256,17 +315,18 @@ h3 {
   line-height: 50px;
 }
 .feedback__button {
-  margin: 25px;
+  margin: 43px;
   width: 190px;
   height: 55px;
   font-size: 14px;
+  letter-spacing: 0.15em;
 }
 .footer {
   background-color: #34547a;
 }
 .footer__contaner {
   margin: 0 auto;
-  max-width: 1150px;
+  max-width: 1170px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -274,15 +334,16 @@ h3 {
 }
 .footer__left {
   color: #ffffff;
+  padding: 10px 0 0 30px;
 }
 .footer__name {
   font-weight: 500;
   font-size: 21px;
-  line-height: 25px;
+  line-height: 35px;
 }
 .footer__copyright {
   font-size: 13px;
-  line-height: 21px;
+  line-height: 35px;
 }
 .footer__right {
   display: flex;
@@ -290,7 +351,7 @@ h3 {
   justify-content: space-between;
 }
 .footer__vk {
-  margin: 55px 21px;
+  margin: 55px 11px;
 }
 /* стили для мобильной версии */
 /* 
@@ -383,39 +444,39 @@ h3 {
 }
 /* ?для адаптива доделать перенос изображение попарно или по 3 */
 @media (max-width: 1240px) {
-  .description,
-  .section-content__text {
+  .right-part__description,
+  .about__text {
     /* margin-bottom: 70px; */
     width: 100%;
   }
-  .right-part {
+  .main__right-part {
     padding-left: 80px;
   }
-  .laptop {
+  .main__laptop {
     padding-left: 50px;
   }
 }
 @media (max-width: 925px) {
-  .logo {
+  .menu__logo {
     padding-left: 0;
     width: 60%;
   }
-  .header-menu {
+  .menu__nav {
     display: none;
   }
-  .section-container {
+  .main__section {
     display: block;
     align-content: center;
     padding-top: 50px;
     margin: 0 auto;
     justify-content: center;
   }
-  .right-part {
+  .main__right-part {
     margin: 0 auto;
     padding: 0;
     text-align: center;
   }
-  .laptop {
+  .main__laptop {
     padding: 0;
     margin: 0 auto 40px auto;
     text-align: center;
@@ -423,7 +484,7 @@ h3 {
   h1 {
     font-size: 36px;
   }
-  .menu-container {
+  .menu__container {
     padding-top: 30px;
   }
   .burger-icon {
@@ -433,7 +494,7 @@ h3 {
     height: 2px;
     width: 24px;
   }
-  .logo {
+  .menu__logo {
     font-size: 48px;
   }
   .skills__container {
@@ -446,11 +507,11 @@ h3 {
   }
 }
 @media (max-width: 400px) {
-  .laptop img {
+  .main__laptop img {
     width: 250px;
   }
-  .description,
-  .section-content__text {
+  .right-part__description,
+  .about__text {
     /* margin-bottom: 70px; */
     width: 100%;
   }

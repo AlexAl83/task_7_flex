@@ -18,12 +18,12 @@
   </head>
   <body>
     <header class="header" id="main-page">
-      <div class="fixed-container">
-        <div class="menu-container">
+      <div class="menu">
+        <div class="menu__container container">
           <!-- сделано просто текстом. как в макете -->
-          <div class="logo">WD</div>
-          <nav class="header-menu">
-            <ul class="menu">
+          <div class="menu__logo">WD</div>
+          <nav class="menu__nav">
+            <ul class="menu__list">
               <li class="menu__item"><a href="#main-page">Главная</a></li>
               <li class="menu__item"><a href="#about-me">Об авторе</a></li>
               <li class="menu__item"><a href="#portfolio">Работы</a></li>
@@ -31,40 +31,40 @@
               <li class="menu__item"><a href="#contacts">Контакты</a></li>
             </ul>
           </nav>
-          <a href="#popup" class="burger-icon">
+          <!-- <a href="#popup" class="burger-icon">
             <span></span>
             <span></span>
             <span></span>
-          </a>
+          </a> -->
         </div>
       </div>
     </header>
     <main>
       <!-- содержимое главной страницы -->
-      <section class="main-section">
-        <div class="fixed-container">
-          <div class="section-container">
-            <div class="laptop">
+      <section class="main">
+        <div class="main__container container">
+          <div class="main__section">
+            <div class="main__laptop">
               <img src="img/laptop.png" alt="" />
             </div>
-            <div class="right-part">
+            <div class="main__right-part">
               <h1>Дизайн и верстка</h1>
-              <div class="description">
+              <div class="right-part__description">
                 Lorem Ipsum - это текст-"рыба", часто используемый в печати и
                 вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для
                 текстов на латинице с начала XVI века.
               </div>
-              <button class="main-section__button">Написать мне</button>
+              <button class="right-part__button">Написать мне</button>
             </div>
           </div>
         </div>
       </section>
       <!-- обо мне -->
-      <section class="about-section">
-        <div class="fixed-container">
-          <div class="section-content__about-me" id="about-me">
+      <section class="about">
+        <div class="about__container container">
+          <div class="about__content" id="about-me">
             <h2>Обо мне</h2>
-            <div class="section-content__text">
+            <div class="about__text">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
               на латинице с начала XVI века.
@@ -73,9 +73,9 @@
         </div>
       </section>
       <!-- *при желании переписать на дивах без списка -->
-      <section class="my-projects">
-        <div class="fixed-container">
-          <div class="projects" id="portfolio">
+      <section class="projects">
+        <div class="projects__container container">
+          <div class="projects__content" id="portfolio">
             <ul class="projects__list">
               <li class="projects__item">
                 <img src="img/40projects.png" alt="" />
@@ -124,7 +124,7 @@
         </div>
       </section>
       <section class="skills">
-        <div class="skills__container">
+        <div class="skills__container container">
           <div class="skills__content">
             <h2>Moи навыки</h2>
             <div class="skills__item">
@@ -165,7 +165,7 @@
           <img src="img/section_img.png" alt="" />
         </div>
       </section>
-      <!-- !здесь дописать секцию Microsoft можно по аналогии с my-project или на дивах без списка-->
+
       <section class="microsoft">
         <div class="microsoft__block">
           <div class="microsoft__img">
