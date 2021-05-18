@@ -75,9 +75,10 @@ h6 {
   font-weight: inherit;
 }
 /*--------------------*/
-body {
+/* фикс ширина только для perfect pixel */
+/* body {
   width: 1920px;
-}
+} */
 .header,
 .main,
 .process,
@@ -443,7 +444,7 @@ h3 {
   color: #e8eb33;
 }
 /* ?для адаптива доделать перенос изображение попарно или по 3 */
-@media (max-width: 1240px) {
+@media (max-width: 1040px) {
   .right-part__description,
   .about__text {
     /* margin-bottom: 70px; */
@@ -456,7 +457,7 @@ h3 {
     padding-left: 50px;
   }
 }
-@media (max-width: 925px) {
+@media (max-width: 825px) {
   .menu__logo {
     padding-left: 0;
     width: 60%;
@@ -506,7 +507,7 @@ h3 {
     padding: 20px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 555px) {
   .main__laptop img {
     width: 250px;
   }
@@ -516,7 +517,16 @@ h3 {
     width: 100%;
   }
   .skills__content {
-    /* margin-bottom: 70px; */
     width: 100%;
+  }
+  .feedback__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+  .form__item {
+    margin: 14px 12px;
+    width: 90%;
   }
 }
