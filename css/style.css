@@ -77,9 +77,9 @@ h6 {
 /*--------------------*/
 /* !фикс ширина только для perfect pixel */
 
-/* body {
+body {
   width: 1920px;
-} */
+}
 .header,
 .main,
 .process,
@@ -90,13 +90,14 @@ h6 {
 
 .container {
   margin: 0 auto;
-  padding: 0 12px;
-  max-width: 1150px;
+  padding: 0 15px;
+  max-width: 1160px;
 }
 .menu__container {
-  padding-top: 50px;
+  padding: 51px 33px 128px 17px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .menu__logo {
   font-family: 'Revalia';
@@ -106,7 +107,7 @@ h6 {
   color: #34547a;
 }
 .menu__nav {
-  padding: 19px 17px 0 0;
+  padding: 0px 0px 7px 0;
 }
 .menu__list {
   display: flex;
@@ -143,7 +144,7 @@ nav ul li a:hover {
 .main__section {
   display: flex;
   justify-content: space-between;
-  padding: 129px 0 156px;
+  padding: 0 2px 156px;
 }
 .main__laptop {
   padding: 22px 0 0 90px;
@@ -315,6 +316,7 @@ h3 {
   height: 175px;
   padding: 0 20px;
   line-height: 50px;
+  resize: none;
 }
 .feedback__button {
   margin: 43px;
