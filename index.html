@@ -9,14 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Revalia&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Revalia&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
+    <!-- !Формируем меню, делаем бургер-меню для мобильной версии -->
     <header class="header" id="main-page">
       <div class="menu">
         <div class="menu__container container">
@@ -31,6 +29,7 @@
               <li class="menu__item"><a href="#contacts">Контакты</a></li>
             </ul>
           </nav>
+          <!-- бургер-меню -->
           <a href="#popup" class="burger-icon">
             <span></span>
             <span></span>
@@ -42,6 +41,7 @@
     <main>
       <!-- содержимое главной страницы -->
       <section class="main">
+        <!-- заключаем содержимое в контейнер -->
         <div class="main__container container">
           <div class="main__section">
             <div class="main__laptop">
@@ -50,9 +50,8 @@
             <div class="main__right-part">
               <h1>Дизайн и верстка</h1>
               <div class="right-part__description">
-                Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для
-                текстов на латинице с начала XVI века.
+                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб‑дизайне. Lorem
+                Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
               </div>
               <button class="right-part__button">Написать мне</button>
             </div>
@@ -65,14 +64,14 @@
           <div class="about__content" id="about-me">
             <h2>Обо мне</h2>
             <div class="about__text">
-              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-              вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
-              на латинице с начала XVI века.
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб‑дизайне. Lorem Ipsum
+              является стандартной "рыбой" для текстов на латинице с начала XVI века.
             </div>
           </div>
         </div>
       </section>
       <!-- *при желании переписать на дивах без списка -->
+      <!-- проекты -->
       <section class="projects">
         <div class="projects__container container">
           <div class="projects__content" id="portfolio">
@@ -127,31 +126,34 @@
         <div class="skills__container container">
           <div class="skills__content">
             <h2>Moи навыки</h2>
-            <div class="skills__item">
-              <div class="item__class">
-                Adobe Photoshop <img src="img/Group 2.png" alt="" />
-              </div>
-              <div class="item__class">
-                Adobe Photoshop <img src="img/Group 2.png" alt="" />
-              </div>
-              <div class="item__class">
-                Adobe Photoshop <img src="img/Group 2.png" alt="" />
-              </div>
-            </div>
+            <ul class="skills__item">
+              <li>
+                <p class="item__class">Adobe Photoshop</p>
+                <progress value="80" max="100"></progress>
+              </li>
+              <li>
+                <p class="item__class">Adobe Photoshop</p>
+                <progress value="80" max="100"></progress>
+              </li>
+              <li>
+                <p class="item__class">Adobe Photoshop</p>
+                <progress value="80" max="100"></progress>
+              </li>
+            </ul>
           </div>
           <div class="skills__avatar">
-            <img src="img/portrait.png" />
+            <img src="img/portrait.png" alt="" />
           </div>
         </div>
       </section>
+      <!-- как я работаю -->
       <section class="process">
         <div class="process__container">
           <div class="process__contant" id="process">
             <h2>Как я работаю</h2>
             <div class="process__text">
-              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-              вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
-              на латинице с начала XVI века.
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб‑дизайне. Lorem Ipsum
+              является стандартной "рыбой" для текстов на латинице с начала XVI века.
             </div>
           </div>
           <div class="process__img">
@@ -159,9 +161,12 @@
           </div>
         </div>
       </section>
-      <!-- для простоты верстки объединили изображения из проекта -->
-      <section class="img-background">
-        <div>
+      <!-- непонятная хрень, возможно для перходов на другие страницы, делаем картинками -->
+      <section class="gallery">
+        <div class="gallery__up">
+          <img src="img/section_img.png" alt="" />
+        </div>
+        <div class="gallery__up">
           <img src="img/section_img.png" alt="" />
         </div>
       </section>
@@ -182,13 +187,13 @@
           </div>
         </div>
       </section>
+      <!-- обратная связь -->
       <section class="feedback">
         <div class="feedback__contaner">
           <h2>Хотите веб-сайт?</h2>
           <div class="feedback__text">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-            вэб‑дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на
-            латинице с начала XVI века.
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб‑дизайне. Lorem Ipsum
+            является стандартной "рыбой" для текстов на латинице с начала XVI века.
           </div>
           <div>
             <form action="#" method="POST" class="feedback__form">
@@ -199,11 +204,7 @@
                 <input placeholder="Ваш e-mail" name="e-mail" type="email" />
               </div>
               <div class="form__item">
-                <textarea
-                  placeholder="Сообщение"
-                  name="text"
-                  type="text"
-                ></textarea>
+                <textarea placeholder="Сообщение" name="text"> </textarea>
               </div>
             </form>
           </div>
@@ -211,6 +212,7 @@
         </div>
       </section>
     </main>
+    <!-- нижняя часть, подвал должен быть прибит к низу страницы -->
     <footer>
       <div class="footer">
         <div class="footer__contaner">
@@ -219,6 +221,7 @@
             <div class="footer__copyright">(с) 2018. Все права защищены.</div>
           </div>
           <div class="footer__right">
+            <!-- !добавить гипперссылки для перехода на страницы соцсетей -->
             <div class="footer__vk">
               <img src="img/vk-logo.png" alt="" />
             </div>
@@ -235,7 +238,6 @@
     <!-- бургер меню -->
     <div class="mobile-container" id="popup">
       <a href="#header" class="popup__area"></a>
-
       <div class="header-mobile">
         <a href="" class="close-icon"> <span></span><span></span></a>
         <ul class="mobile-list">
