@@ -77,9 +77,9 @@ h6 {
 /*--------------------*/
 /* !фикс ширина только для pixel perfect  */
 
-/* body {
+body {
   width: 1920px;
-} */
+}
 .header,
 .main,
 .process,
@@ -239,14 +239,15 @@ h3 {
   padding: 107px 20px 40px 12px;
 }
 .skills__item {
-  padding: 45px 10px 25px 0px;
+  padding: 30px 10px 25px 0px;
 }
 .item__class {
-  padding: 15px 0;
+  padding: 15px 0 0px;
 }
 progress {
+  margin: 20px 0px 13px 0px;
   height: 4px;
-  width: 400px;
+  width: 445px;
 }
 .skills__avatar {
   flex: 1 1 555px;
@@ -268,16 +269,38 @@ progress {
 }
 .process__contant {
   max-width: 540px;
-  margin: 46px auto;
+  margin: 49px 0 45px;
   text-align: center;
 }
 .process__img img {
   max-width: 100%;
 }
-
-.img-background img {
-  margin: 0 auto;
+.gallery__up,
+.gallery__down {
+  display: flex;
+}
+.galery__img {
+  width: 480px;
+  height: 480px;
+  position: relative;
+  background: #34537a00;
+  cursor: pointer;
+}
+.galery__img::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
   width: 100%;
+  height: 100%;
+  background: #34537a url(/img/view.png) no-repeat;
+  background-position: 50% 50%;
+  transition: opacity 0.3s;
+}
+.galery__img img {
+  position: absolute;
+}
+.galery__img:hover::after {
+  opacity: 0.6;
 }
 .microsoft__block {
   flex-direction: row;
@@ -306,7 +329,6 @@ progress {
 }
 .form__item {
   margin: 14px 0px 5px 0px;
-  width: 48%;
 }
 .form__item:last-child {
   flex-grow: 1;
